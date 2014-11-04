@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
   patch 'pictures/:id' => "pictures#update"
 
+  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+
+
   Rails.application.routes.draw do
     get 'pictures' => 'pictures#index'
 
